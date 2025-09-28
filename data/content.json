@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "id": "Arabic",
+      "title": "Wahee Arabic",
+      "description": "Arabic Language Presentations",
+      "icon": "language",
+      "presentations": [
+            {
+            "id": "arabic-word-types",
+            "title": "Understanding Arabic Word Types and Conjugation",
+            "description": "A comprehensive guide to Arabic word types, conjugation patterns, irregular uses, and grammatical structures, with examples and analysis.",
+            "thumbnail": "/images/arabic-wahee/arabic-presentation.png",
+            "type": "Prezi",
+            "presentationUrl": "https://prezi.com/p/embed/DiNSyg6rqJB8OKxbDCsf/"
+            }
+       ]
+    },
+    {
+      "id": "PSHE",
+      "title": "Wahee PSHE",
+      "description": "PSHE slides and presentations",
+      "icon": "people",
+      "presentations": [
+            {
+            "id": "Influencers",
+            "title": "Understanding Influencers and Their Impact",
+            "description": "A detailed exploration of influencers, their roles in modern society, and their effects on culture and consumer behavior.",
+            "thumbnail": "/images/PSHE-wahee/Influencers.png",
+            "type": "slidesGPT",
+            "presentationUrl": "https://slidesgpt.com/l/7vPv"
+            }
+       ]
+    }
+  ]
+}

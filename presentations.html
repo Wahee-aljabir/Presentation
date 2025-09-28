@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle">
+        <button id="themeToggle">
+            <span class="toggle-icon">🌙</span>
+        </button>
+    </div>
+
+    <main class="container">
+        <div class="header-section">
+            <a href="index.html" class="back-button">
+                <span class="material-icons">arrow_back</span>
+                Back to Categories
+            </a>
+            <h1 class="page-title">Presentations</h1>
+        </div>
+
+        <div class="presentations-grid" id="presentationsContainer">
+            <!-- Content will be dynamically populated by JavaScript -->
+        </div>
+
+        <div id="presentationModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
