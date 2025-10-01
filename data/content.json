@@ -17,20 +17,28 @@
        ]
     },
     {
-      "id": "PSHE",
-      "title": "Wahee PSHE",
-      "description": "PSHE slides and presentations",
-      "icon": "people",
-      "presentations": [
-            {
-            "id": "Influencers",
-            "title": "Understanding Influencers and Their Impact",
-            "description": "A detailed exploration of influencers, their roles in modern society, and their effects on culture and consumer behavior.",
-            "thumbnail": "/images/PSHE-wahee/Influencers.png",
-            "type": "slidesGPT",
-            "presentationUrl": "https://slidesgpt.com/l/7vPv"
-            }
-       ]
+  "id": "PSHE",
+  "title": "Wahee PSHE",
+  "description": "PSHE slides and presentations",
+  "icon": "people",
+  "presentations": [
+    {
+    "id": "Influencers",
+    "title": "Understanding Influencers and Their Impact",
+    "description": "A detailed exploration of influencers, their roles in modern society, and their effects on culture and consumer behavior.",
+    "thumbnail": "/images/PSHE-wahee/Influencers.png",
+    "type": "slidesGPT",
+    "presentationUrl": "https://slidesgpt.com/l/7vPv"
+    },
+    {
+    "id": "google-slides-pshe-demo",
+    "title": "Google Slides Demo",
+    "description": "A sample Google Slides presentation for PSHE.",
+    "thumbnail": "https://www.gstatic.com/images/icons/material/system/2x/slideshow_black_48dp.png",
+    "type": "GoogleSlides",
+    "presentationUrl": "https://docs.google.com/presentation/d/1BN4UslznBLpsuYkLp6JhkMVHEYgyIjIZJGWjIu8RKSQ/edit?slide=id.SLIDES_API475933398_0"
+    }
+   ]
     }
   ]
 }

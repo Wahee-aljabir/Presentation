@@ -56,30 +56,45 @@ document.addEventListener('DOMContentLoaded', async () => {
     const contentData = await loadContent();
     if (!contentData) return;
 
-    // Create presentation content based on type
+    // Create presentation content based on type (case-insensitive)
     const createPresentationContent = (presentation) => {
-        switch (presentation.type.toLowerCase()) {
-            case 'prezi':
-                return `<iframe src="${presentation.presentationUrl}" 
-                    id="iframe_container" 
-                    frameborder="0" 
-                    webkitallowfullscreen="" 
-                    mozallowfullscreen="" 
-                    allowfullscreen="" 
-                    allow="autoplay; fullscreen" 
-                    height="600" 
-                    width="100%"></iframe>`;
-            case 'slidesgpt':
-                return `<iframe src="${presentation.presentationUrl}"
-                    frameborder="0"
-                    allowfullscreen=""
-                    height="600"
-                    width="100%"></iframe>`;
-            default:
-                return `<div class="presentation-placeholder">
-                    <h3>${presentation.title}</h3>
-                    <p>Presentation type not supported</p>
-                </div>`;
+        const type = (presentation.type || '').toLowerCase();
+        const url = presentation.presentationUrl;
+        if (type === 'prezi') {
+            return `<iframe src="${url}" 
+                id="iframe_container" 
+                frameborder="0" 
+                webkitallowfullscreen="" 
+                mozallowfullscreen="" 
+                allowfullscreen="" 
+                allow="autoplay; fullscreen" 
+                height="600" 
+                width="100%"></iframe>`;
+        } else if (type === 'slidesgpt' || type === 'slidesgpt') {
+            return `<iframe src="${url}"
+                frameborder="0"
+                allowfullscreen=""
+                height="600"
+                width="100%"></iframe>`;
+        } else if (type === 'googleslides' || (url && url.includes('docs.google.com/presentation'))) {
+            // Google Slides embed
+            // If the URL is a Google Slides link, convert to embed format if needed
+            let embedUrl = url;
+            if (url.includes('/pub?')) {
+                embedUrl = url.replace('/pub?', '/embed?');
+            } else if (url.includes('/edit')) {
+                embedUrl = url.replace('/edit', '/embed');
+            }
+            return `<iframe src="${embedUrl}" 
+                frameborder="0" 
+                allowfullscreen 
+                width="100%" 
+                height="600"></iframe>`;
+        } else {
+            return `<div class="presentation-placeholder">
+                <h3>${presentation.title}</h3>
+                <p>Presentation type not supported</p>
+            </div>`;
         }
     };
 
