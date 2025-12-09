@@ -13,6 +13,14 @@
             "thumbnail": "/images/arabic-wahee/arabic-presentation.png",
             "type": "Prezi",
             "presentationUrl": "https://prezi.com/p/embed/DiNSyg6rqJB8OKxbDCsf/"
+            },
+            {
+            "id": "Expedition of Waddan",
+            "title": "Expedition of Waddan",
+            "description": "The Battle of Waddan reflections and progressive timeline",
+            "thumbnail": "/images/arabic-wahee/Waddan.png",
+            "type": "GoogleSlides",
+            "presentationUrl": "https://docs.google.com/presentation/d/1lo3TpDuEzmfdCiNuaXqRMr4EdyWAAx3Yh9xhTsAe4QI/edit?usp=sharing"
             }
        ]
     },
