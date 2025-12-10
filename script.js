@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const modal = document.getElementById('presentationModal');
     const modalContent = document.getElementById('modalContent');
     const closeModal = document.querySelector('.close-modal');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
 
     const openModal = (presentation) => {
         modalContent.innerHTML = createPresentationContent(presentation);
@@ -110,10 +111,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const closeModalHandler = () => {
         modal.style.display = 'none';
+        modal.classList.remove('fullscreen');
+        if (fullscreenBtn) fullscreenBtn.classList.remove('active');
         modalContent.innerHTML = '';
     };
 
+    const toggleFullscreen = () => {
+        modal.classList.toggle('fullscreen');
+        fullscreenBtn.classList.toggle('active');
+    };
+
     closeModal?.addEventListener('click', closeModalHandler);
+    fullscreenBtn?.addEventListener('click', toggleFullscreen);
 
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
@@ -121,10 +130,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Handle escape key
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && modal.style.display === 'block') {
             closeModalHandler();
+        }
+        if (event.key === 'f' && modal.style.display === 'block') {
+            toggleFullscreen();
         }
     });
 
